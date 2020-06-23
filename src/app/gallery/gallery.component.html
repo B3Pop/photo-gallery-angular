@@ -1,0 +1,44 @@
+<div class="row">
+  <h4>{{ title }}</h4>
+</div>
+<div class="row">
+  <div class="btn-toolbar">
+    <button
+      class="btn btn-lg btn-info btn-space"
+      [class.active]="filterBy === 'all'"
+      (click)="filterBy = 'all'"
+    >
+      All
+    </button>
+    <button
+      class="btn btn-lg btn-info btn-space"
+      [class.active]="filterBy === 'cars'"
+      (click)="filterBy = 'cars'"
+    >
+      Cars
+    </button>
+    <button
+      class="btn btn-lg btn-info btn-space"
+      [class.active]="filterBy === 'boats'"
+      (click)="filterBy = 'boats'"
+    >
+      Boats
+    </button>
+    <button
+      class="btn btn-lg btn-info btn-space"
+      [class.active]="filterBy === 'planes'"
+      (click)="filterBy = 'planes'"
+    >
+      Planes
+    </button>
+  </div>
+</div>
+<div class="row">
+  <ul id="thumbnails">
+    <li *ngFor="let image of displayedImages | imageFilter: filterBy">
+      <a [routerLink]="['/image', image.id]" href="#">
+        <img src="{{ image.url }}" class="thumbnail" width="240" height="150"
+      /></a>
+    </li>
+  </ul>
+</div>

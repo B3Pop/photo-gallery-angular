@@ -1,0 +1,22 @@
+ul {
+  padding: 0;
+  text-align: left;
+}
+li {
+  display: inline;
+}
+
+h4 {
+  padding-top: 10px;
+}
+
+.thumbnail {
+  margin: 6px;
+  border: 4px solid #eee;
+  box-shadow: #555 1px 1px 8px 1px;
+}
+
+.btn-space {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
